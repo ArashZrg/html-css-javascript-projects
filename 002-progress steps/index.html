@@ -8,15 +8,19 @@
   </head>
   <body>
     <div class="container">
-      <div class="progress-container">
-        <div class="progress" id="progress"></div>
-        <div class="circle active">1</div>
+      <div id="circle-container">
+        <div class="circle active-circle">1</div>
+        <div class="line"></div>
         <div class="circle">2</div>
+        <div class="line"></div>
         <div class="circle">3</div>
+        <div class="line"></div>
         <div class="circle">4</div>
       </div>
-      <button class="btn" id="prev" disabled>Prev</button>
-      <button class="btn" id="next">Next</button>
+      <div id="button-container">
+        <button class="prev btn">Prev</button>
+        <button class="next btn active-btn">Next</button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

@@ -1,34 +1,37 @@
-const progress = document.getElementById("progress");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
+"use strict";
+
+// select all elements i need
 const circles = document.querySelectorAll(".circle");
+const lines = document.querySelectorAll(".line");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
 
-let currentActive = 1;
+let whichNumber = 0;
 
-next.addEventListener("click", () => {
-  currentActive++;
-  if (currentActive > circles.length) currentActive = circles.length;
-  update();
-});
-
-prev.addEventListener("click", () => {
-  currentActive--;
-  if (currentActive < 1) currentActive = 1;
-  update();
-});
-
-const update = () => {
-  circles.forEach((circle, index) => {
-    if (index < currentActive) circle.classList.add("active");
-    else circle.classList.remove("active");
-  });
-  const actives = document.querySelectorAll(".active");
-  progress.style.width =
-    ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
-  if (currentActive === 1) prev.disabled = true;
-  else if (currentActive === circles.length) next.disabled = true;
-  else {
-    prev.disabled = false;
-    next.disabled = false;
+// Next Event
+nextBtn.addEventListener("click", (e) => {
+  if (whichNumber < 3) {
+    whichNumber++;
+    prevBtn.classList.add("active-btn");
+    circles[whichNumber].classList.add("active-circle");
+    lines[whichNumber - 1].classList.add("active-line");
   }
-};
+  if (whichNumber == 3) {
+    nextBtn.classList.remove("active-btn");
+    return;
+  }
+});
+
+// Prev Event
+prevBtn.addEventListener("click", (e) => {
+  if (whichNumber > 0) {
+    nextBtn.classList.add("active-btn");
+    circles[whichNumber].classList.remove("active-circle");
+    lines[whichNumber - 1].classList.remove("active-line");
+    whichNumber--;
+  }
+  if (whichNumber == 0) {
+    prevBtn.classList.remove("active-btn");
+    return;
+  }
+});

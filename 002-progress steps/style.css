@@ -1,100 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
-:root {
-  --line-border-fill: #3498db;
-  --line-border-empty: #e0e0e0;
-}
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Muli", sans-serif;
-  background-color: #f6f7fb;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  align-items: center;
+
+  margin-top: 5rem;
 }
+
 
 .container {
-  text-align: center;
-}
-
-.progress-container {
+  width: 20rem;
+  height: 8rem;
   display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 30px;
-  max-width: 100%;
-  width: 350px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.4rem;
+
 }
 
-.progress-container::before {
-  content: ""; /* Mandatory with ::before */
-  background-color: var(--line-border-empty);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 100%;
-  z-index: -1;
+
+/* cicles styles */
+#circle-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.progress {
-  background-color: var(--line-border-fill);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 0%;
-  z-index: -1;
-  transition: 0.4s ease;
+.line {
+  width: 3rem;
+  border: solid rgb(224, 213, 213) 2px;
+
+}
+
+.active-line {
+  border-color: blue;
 }
 
 .circle {
-  background-color: #fff;
-  color: #999;
+  padding-top: 0.4rem;
+  text-align: center;
+  border: solid black 1px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid var(--line-border-empty);
-  transition: 0.4s ease;
+  color: lightgray;
 }
 
-.circle.active {
-  border-color: var(--line-border-fill);
+.active-circle {
+  background-color: blue;
+}
+
+
+/* Button styles */
+#button-container {
+  width: 12rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
 }
 
 .btn {
-  background-color: var(--line-border-fill);
-  color: #fff;
-  border: 0;
-  border-radius: 6px;
+  text-align: center;
+  width: 5rem;
+  height: 2rem;
+  opacity: 0.9;
+  border-radius: 0.2rem;
+  border: none;
+  color: rgb(70, 59, 59);
+}
+
+.btn:hover {
+  opacity: 1;
   cursor: pointer;
-  font-family: inherit;
-  padding: 8px 30px;
-  margin: 5px;
-  font-size: 14px;
 }
 
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn:focus {
-  outline: 0;
-}
-
-.btn:disabled {
-  background-color: var(--line-border-empty);
-  cursor: not-allowed;
+.active-btn {
+  background-color: blue;
+  color: white;
+  opacity: 0.8;
 }
