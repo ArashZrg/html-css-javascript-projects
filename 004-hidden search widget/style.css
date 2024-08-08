@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
+  margin: 0;
+  pad: 0;
   box-sizing: border-box;
 }
 
@@ -12,46 +14,112 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
 }
 
-.search {
-  position: relative;
-  height: 50px;
+/* #search-box {
+
+  width: 10rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: spand 0.5s forwards ease-out alternate;
 }
 
-.search .input {
-  background-color: #fff;
-  border: 0;
-  font-size: 18px;
-  padding: 15px;
-  height: 50px;
-  width: 50px;
-  transition: width 0.3s ease;
+#input-div {
+  width: 80%;
+  height: 100%;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn {
-  background-color: #fff;
-  border: 0;
-  cursor: pointer;
-  font-size: 24px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 50px;
-  transition: transform 0.3s ease;
+#magnifire-div {
+  width: 20%;
+  height: 100%;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn:focus,
-.input:focus {
+.inp {
+  width: 100%;
+  height: 100%;
+
+}
+
+.icon {
+  width: 1.3rem;
+  height: ;
+} */
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.input {
+  background-color: white;
+  border: none;
+  height: 2rem;
   outline: none;
+  opacity: 0;
+  padding: 0.5rem;
+  max-width: 0;
+  transition: max-width 1s ease-out, opacity 1s ease-out;
 }
 
-.search.active .input {
-  width: 200px;
+.image {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-.search.active .btn {
-  transform: translateX(198px);
+
+.input-show {
+  max-width: 10rem;
+  opacity: 0.8;
 }
+
+.input-close {
+  max-width: 0;
+  opacity: 0;
+}
+
+/* .input-show {
+  display: block;
+  animation: show 1s alternate forwards ease-out;
+}
+
+@keyframes show {
+  0% {
+    width: 1rem;
+  }
+
+  100% {
+    width: 10rem;
+  }
+}
+
+.input-close {
+  display: none;
+  animation: close 1s alternate forwards ease-out;
+}
+
+@keyframes close {
+  0% {
+    width: 10rem;
+  }
+
+  100% {
+    width: 0;
+  }
+} */
