@@ -1,117 +1,128 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
-  background-color: #2a2a72;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+  background-color: rgb(52, 0, 156);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#container {
+  width: 70%;
+  height: 50rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2rem;
+  margin-top: 10rem;
 }
 
-.user-form {
-  width: 95%;
-  max-width: 700px;
-}
+.search-box {
+  font-family: 'Courier New', Courier, monospace;
 
-.user-form input {
-  width: 100%;
-  display: block;
-  background-color: #4c2885;
+  width: 60%;
+  height: 7rem;
   border: none;
-  border-radius: 10px;
-  color: #fff;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  font-family: inherit;
-  font-size: 1rem;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+
+  background-color: rgba(150, 40, 181, 0.5);
+  color: white;
+  box-shadow: inset 0px 0.1rem 1.1rem -0.3rem rgba(0, 0, 0, 0.7);
+
+  font-size: 2rem;
+  border-radius: 1rem;
 }
 
-.user-form input:focus {
+.search-box::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(232, 213, 213);
+  opacity: 0.8;
+}
+
+.search-box:focus {
   outline: none;
 }
 
-.user-form input::placeholder {
-  color: #bbb;
+.info-box {
+  background-color: rgba(150, 40, 181, 0.5);
+  width: 75%;
+  height: 90%;
+
+  border: none;
+  border-radius: 1rem;
+
+  position: relative;
 }
 
-.card {
-  max-width: 800px;
-  background-color: #4c2885;
-  border-radius: 20px;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
-  display: flex;
-  padding: 3rem;
-  margin: 0 1.5rem;
-}
 
-.avatar {
+#profile-image {
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
-  border: 10px solid #2a2a72;
-  height: 150px;
-  width: 150px;
+  border: solid rgba(17, 9, 117, 0.6) 1rem;
+  position: absolute;
+  left: 4rem;
+  top: 2.5rem;
 }
 
-.user-info {
-  color: #eee;
-  margin-left: 2rem;
+
+.text-info {
+  font-size: 1.6rem;
+  position: absolute;
+  left: 21rem;
+  line-height: 5rem;
+  top: 5rem;
+  color: rgb(226, 209, 209);
+  font-family: sans-serif;
 }
 
-.user-info h2 {
-  margin-top: 0;
-}
 
-.user-info ul {
-  list-style-type: none;
+#status {
   display: flex;
-  justify-content: space-between;
-  padding: 0;
-  max-width: 400px;
+  gap: 10rem;
+  font-size: 1.6rem;
+  position: absolute;
+  left: 21rem;
+  line-height: 5rem;
+  bottom: 10rem;
+  color: rgb(226, 209, 209);
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
-.user-info ul li {
+#repos-name {
+  width: 51rem;
+  height: 10rem;
   display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  position: absolute;
+  bottom: 2rem;
+  right: 6.8rem;
+  padding: 1rem
+}
+
+#repos-name>div {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: start;
   align-items: center;
-}
-
-.user-info ul li strong {
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-}
-
-.repo {
-  text-decoration: none;
-  color: #fff;
-  background-color: #212a72;
-  font-size: 0.7rem;
-  padding: 0.25rem 0.5rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-}
-
-@media (max-width: 500px) {
-  .card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .user-form {
-    max-width: 400px;
-  }
-
-  .user-info {
-    margin-left: 0;
-  }
+  background-color: rgba(17, 9, 117, 0.6);
+  padding: 0.6rem;
+  color: white;
 }

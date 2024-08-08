@@ -3,19 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>github-profiles</title>
     <link rel="stylesheet" href="style.css" />
-    <title>GitHub Profiles</title>
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <form class="user-form" id="form">
-      <input type="text" placeholder="Search a GitHub User" id="search" />
-    </form>
-    <main id="main"></main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
+    <div id="container">
+      <input spellcheck="false" class="search-box" placeholder="Search a GitHub User"></input>
+      <div class="info-box">
+        <img src="IMG_20240317_123628_541.jpg" alt="" id="profile-image">
+        
+        <div class="text-info">
+          <h2>Arash Zarghami</h2>
+          <p>im frontend developer and in</p>
+          <h1>Front-End</h1>
+          <p>Developping</p>
+        </div>
+        
+        <div id="status">
+          <p class="followers">11 Followers</p>
+          <p class="following">11 Following</p>
+          <p class="repos">5 Repos</p>
+        </div>
+         
+        <div id="repos-name">
+          <div>html-css-javascrtip-project</div>
+          <div>map-app</div>
+          <div>drf__project</div>
+          <div>ArashZrg</div>
+          <div>University-unit</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
