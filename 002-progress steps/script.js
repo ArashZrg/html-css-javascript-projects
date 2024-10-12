@@ -19,7 +19,9 @@ nextBtn.addEventListener("click", (e) => {
   }
   if (whichNumber == 3) {
     nextBtn.classList.remove("active-btn");
+    nextBtn.disabled = true;
   }
+  console.log(whichNumber);
 });
 
 // Prev Event
